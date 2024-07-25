@@ -5,10 +5,10 @@ import { Visibility, VisibilityOff } from '@mui/icons-material';
 
 export default function LoginForm({ userNameValue, handleUserNameChange, passwordValue, handlePasswordChange, handleSignIn, data, toggleLoginForm, handleToggleLogin }) {
     const handleGoogleLogin = () => {
-        window.open("https://vision-led-be.onrender.com/api/auth/google", "_self")
+        window.open("https://api.visionled.online/api/auth/google", "_self")
     }
     const handleFacebookLogin = () => {
-        window.open("https://vision-led-be.onrender.com/api/auth/facebook", "_self")
+        window.open("https://api.visionled.online/api/auth/facebook", "_self")
     }
     const [showPassword, setShowPassword] = React.useState(false);
     const handleClickShowPassword = () => setShowPassword((show) => !show);
