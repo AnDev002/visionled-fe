@@ -5,14 +5,18 @@ import { Box, Card, CardContent, CardMedia, Grid, Typography } from '@mui/materi
 import { useNavigate, useParams } from 'react-router-dom'
 import * as ProjectServices from "../../../../Services/ProjectServices"
 import { useQuery } from '@tanstack/react-query'
+import BtnSeeMore from '../../../Components/btnSeeMore'
 
 
-const ProjectCard = ({ title, image, description }) => (
+const ProjectCard = ({ onClickEvent, title, image, description }) => (
   <Card 
   sx={{
     cursor: "pointer",
-    userSelect: 'none',
-  }}>
+    border: '1px solid black', 
+    borderRadius: '12px'
+  }}
+  onClick={onClickEvent} 
+  >
   <CardMedia
     component="img"
     alt={title}
@@ -20,10 +24,13 @@ const ProjectCard = ({ title, image, description }) => (
     image={image}
     title={title}
     sx={{
-      pointerEvents: 'none',
+      cursor: "pointer",
+      userSelect: 'none',
     }}
   />
-  <CardContent>
+  <CardContent sx={{
+    backgroundColor: 'transparent', 
+  }}>
     <Typography variant="h5" component="div">
       {title}
     </Typography>
@@ -50,6 +57,7 @@ export default function ProjectsContent() {
   }
   const { isLoading, data } = useQuery({ queryKey: ['projects'], queryFn: getAllProject })
   const handleNavLink = (projectId) => {
+    console.log("ok");
       navigate(`/project-details/${projectId}`);
   }
 
@@ -78,34 +86,15 @@ export default function ProjectsContent() {
                     padding: '20px',
                     gap: '20px'}}>
                       <Grid container spacing={3}>
-                        
-                       
-                        <Grid item xs={12} sm={6} md={4}>
-                          <ProjectCard title="Product 2" image="https://www.ikea.com/us/en/images/products/kryssmast-table-lamp-with-led-bulb-nickel-plated__0789157_pe763849_s5.jpg?f=l" description="UxgknA86AqSR3nLoRGetBzM5e5osrJJBJdZkb4NBEWWtv4dJLvIUCJB2j6VB120bKvrKOJZWUxgknA86AqSR3nLoRGetBzM5e5osrJJBJdZkb4NBEWWtv4dJLvIUCJB2j6VB120bKvrKOJZWUxgknA86AqSR3nLoRGetBzM5e5osrJJBJdZkb4NBEWWtv4dJLvIUCJB2j6VB120bKvrKOJZW" />
-                        </Grid>
-                       
-                        <Grid item xs={12} sm={6} md={4}>
-                          <ProjectCard title="Product 2" image="https://www.ikea.com/us/en/images/products/kryssmast-table-lamp-with-led-bulb-nickel-plated__0789157_pe763849_s5.jpg?f=l" description="UxgknA86AqSR3nLoRGetBzM5e5osrJJBJdZkb4NBEWWtv4dJLvIUCJB2j6VB120bKvrKOJZWUxgknA86AqSR3nLoRGetBzM5e5osrJJBJdZkb4NBEWWtv4dJLvIUCJB2j6VB120bKvrKOJZWUxgknA86AqSR3nLoRGetBzM5e5osrJJBJdZkb4NBEWWtv4dJLvIUCJB2j6VB120bKvrKOJZW" />
-                        </Grid>
-                       
-                        <Grid item xs={12} sm={6} md={4}>
-                          <ProjectCard title="Product 2" image="https://www.ikea.com/us/en/images/products/kryssmast-table-lamp-with-led-bulb-nickel-plated__0789157_pe763849_s5.jpg?f=l" description="UxgknA86AqSR3nLoRGetBzM5e5osrJJBJdZkb4NBEWWtv4dJLvIUCJB2j6VB120bKvrKOJZWUxgknA86AqSR3nLoRGetBzM5e5osrJJBJdZkb4NBEWWtv4dJLvIUCJB2j6VB120bKvrKOJZWUxgknA86AqSR3nLoRGetBzM5e5osrJJBJdZkb4NBEWWtv4dJLvIUCJB2j6VB120bKvrKOJZW" />
-                        </Grid>
-                       
-                        <Grid item xs={12} sm={6} md={4}>
-                          <ProjectCard title="Product 2" image="https://www.ikea.com/us/en/images/products/kryssmast-table-lamp-with-led-bulb-nickel-plated__0789157_pe763849_s5.jpg?f=l" description="UxgknA86AqSR3nLoRGetBzM5e5osrJJBJdZkb4NBEWWtv4dJLvIUCJB2j6VB120bKvrKOJZWUxgknA86AqSR3nLoRGetBzM5e5osrJJBJdZkb4NBEWWtv4dJLvIUCJB2j6VB120bKvrKOJZWUxgknA86AqSR3nLoRGetBzM5e5osrJJBJdZkb4NBEWWtv4dJLvIUCJB2j6VB120bKvrKOJZW" />
-                        </Grid>
-                       
-                        <Grid item xs={12} sm={6} md={4}>
-                          <ProjectCard title="Product 2" image="https://www.ikea.com/us/en/images/products/kryssmast-table-lamp-with-led-bulb-nickel-plated__0789157_pe763849_s5.jpg?f=l" description="UxgknA86AqSR3nLoRGetBzM5e5osrJJBJdZkb4NBEWWtv4dJLvIUCJB2j6VB120bKvrKOJZWUxgknA86AqSR3nLoRGetBzM5e5osrJJBJdZkb4NBEWWtv4dJLvIUCJB2j6VB120bKvrKOJZWUxgknA86AqSR3nLoRGetBzM5e5osrJJBJdZkb4NBEWWtv4dJLvIUCJB2j6VB120bKvrKOJZW" />
-                        </Grid>
-                       
-                        <Grid item xs={12} sm={6} md={4}>
-                          <ProjectCard title="Product 2" image="https://www.ikea.com/us/en/images/products/kryssmast-table-lamp-with-led-bulb-nickel-plated__0789157_pe763849_s5.jpg?f=l" description="UxgknA86AqSR3nLoRGetBzM5e5osrJJBJdZkb4NBEWWtv4dJLvIUCJB2j6VB120bKvrKOJZWUxgknA86AqSR3nLoRGetBzM5e5osrJJBJdZkb4NBEWWtv4dJLvIUCJB2j6VB120bKvrKOJZWUxgknA86AqSR3nLoRGetBzM5e5osrJJBJdZkb4NBEWWtv4dJLvIUCJB2j6VB120bKvrKOJZW" />
-                        </Grid>
-                       
-                        {/* Add more cards as needed */}
-                      </Grid>
+                      {
+                        isLoading === false && data?.data.length > 0 &&
+                        data.data.map((item, index) => (
+                          <Grid item key={index} xs={12} sm={6} md={4}>
+                            <ProjectCard onClickEvent={() => handleNavLink(item._id)} style={{ mgLeft: '0', transform: 'none' }} title={item.name} image={item.image} description={item.description} />
+                          </Grid>
+                        ))}
+                      </Grid> 
+
 
                     </Box>
 

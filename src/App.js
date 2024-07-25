@@ -26,7 +26,7 @@ import ProjectDetails from './Pages/ProjectDetails/projectDetails';
 import CreateOrderSuccess from './Pages/Components/createOrderSuccess';
 import FastContactButton from './Pages/Components/fastContactButton';
 import ViewOrderPage from './Pages/Components/viewOrderPage';
-
+import { TouchProvider } from './Hooks/TouchProvider';
 
 const theme = createTheme({
   typography: {
@@ -76,6 +76,7 @@ function App() {
 
   return (
     <>
+    <TouchProvider>
       <ThemeProvider theme={theme}>
         <Router>
           <GoToTop />
@@ -99,6 +100,7 @@ function App() {
           </Routes>
         </Router>
       </ThemeProvider>
+    </TouchProvider>
     </>
   );
 }
