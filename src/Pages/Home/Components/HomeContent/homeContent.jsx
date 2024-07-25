@@ -29,7 +29,7 @@ export default function HomeContent() {
     return (
         <>
             <Box className="full-height-img">
-                <Box sx={{ display: 'flex', justifyContent: 'center', position: 'absolute', top: '50%', left: '50%', gap: "10px", transform: 'translate(-50%, -50%)', zIndex: '100', flexWrap: 'wrap' }}>
+                <Box sx={{ display: 'flex', justifyContent: 'center', position: 'absolute', top: '50%', left: '50%', transform: 'translate(-50%, -50%)', zIndex: '100', flexWrap: 'wrap' }}>
                     <Box className="home-content-s" sx={{
                         width: '100vw', padding: '0 20px', color: "white", fontFamily: '"Inconsolata", monospace',
                         display: 'flex', justifyContent: 'center'
