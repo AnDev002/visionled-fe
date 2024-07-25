@@ -76,31 +76,33 @@ function App() {
 
   return (
     <>
-    <TouchProvider>
       <ThemeProvider theme={theme}>
-        <Router>
-          <GoToTop />
-          <FastContactButton />
-          <Routes>
-            <Route exact path='/' element={<Home />} />
-            <Route path='/login-success/:provider/:userId' element={<LoginSuccess />} />
-            <Route path='/product-details/:productId' element={<ProductDetails />} />
-            <Route path='/products' element={<Products />} />
-            <Route path='/project-details/:projectId' element={<ProjectDetails />} />
-            <Route path='/products/:collectionId' element={<Products />} />
-            <Route path='/collections' element={<Collections />} />
-            <Route path='/projects' element={<Projects />} />
-            <Route path='/about-us' element={<AboutUs />} />
-            <Route path='/payment' element={<Payment />} />
-            <Route path='/payment/form/:orderId' element={<PaymentForm />} />
-            <Route path='/create-order-success' element={<CreateOrderSuccess />} />
-            <Route path='/follow-your-orders' element={<ViewOrderPage />} />
-            <Route path='/admin' element={<Admin />} />
-            <Route path="*" element={<p>Path not resolved</p>} />
-          </Routes>
-        </Router>
+        
+        <TouchProvider>
+          <Router>
+            <GoToTop />
+            <FastContactButton />
+            <Routes>
+              <Route exact path='/' element={<Home />} />
+              <Route path='/login-success/:provider/:userId' element={<LoginSuccess />} />
+              <Route path='/product-details/:productId' element={<ProductDetails />} />
+              <Route path='/products' element={<Products />} />
+              <Route path='/project-details/:projectId' element={<ProjectDetails />} />
+              <Route path='/products/:collectionId' element={<Products />} />
+              <Route path='/collections' element={<Collections />} />
+              <Route path='/projects' element={<Projects />} />
+              <Route path='/about-us' element={<AboutUs />} />
+              <Route path='/payment' element={<Payment />} />
+              <Route path='/payment/form/:orderId' element={<PaymentForm />} />
+              <Route path='/create-order-success' element={<CreateOrderSuccess />} />
+              <Route path='/follow-your-orders' element={<ViewOrderPage />} />
+              <Route path='/admin' element={<Admin />} />
+              <Route path="*" element={<p>Path not resolved</p>} />
+            </Routes>
+          </Router>
+        </TouchProvider>
+
       </ThemeProvider>
-    </TouchProvider>
     </>
   );
 }

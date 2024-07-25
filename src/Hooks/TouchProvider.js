@@ -52,6 +52,8 @@ export const TouchProvider = ({ children }) => {
 
   const handleTouchStart = (e) => {
     e.preventDefault();
+    if (startY === null) return; 
+
     setStartY(e.touches[0].clientY);
     setIsVisible(true); 
   };
