@@ -58,7 +58,7 @@ export const TouchProvider = ({ children }) => {
 
   const handleTouchMove = (e) => {
     e.preventDefault();
-    if (startY === null) return;
+    //if (startY === null) return;
 
     const currentY = e.touches[0].clientY;
     const diffY = currentY - startY;
