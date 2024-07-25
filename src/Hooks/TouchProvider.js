@@ -51,11 +51,13 @@ export const TouchProvider = ({ children }) => {
   }, []);
 
   const handleTouchStart = (e) => {
+    e.preventDefault();
     setStartY(e.touches[0].clientY);
     setIsVisible(true); 
   };
 
   const handleTouchMove = (e) => {
+    e.preventDefault();
     if (startY === null) return;
 
     const currentY = e.touches[0].clientY;
@@ -64,7 +66,8 @@ export const TouchProvider = ({ children }) => {
     setMovedY(diffY);
   };
 
-  const handleTouchEnd = () => {
+  const handleTouchEnd = (e) => {
+    e.preventDefault();
     setStartY(null);
     setMovedY(0);
     setIsVisible(false);
