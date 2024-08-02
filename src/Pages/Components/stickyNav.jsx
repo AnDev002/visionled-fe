@@ -166,10 +166,10 @@ export default function StickyNav() {
     return (
         <>
             <div className="nav-container" style={headerStyle}>
-                <AppBar position='static' sx={{ bgcolor: "#fff0", boxShadow: 'none' }}>
+                <AppBar position='static' sx={{ bgcolor: "#0000008a", boxShadow: 'none' }}>
                     <Toolbar className="nav-wrapper" style={{ display: "flex", justifyContent: "space-between" }}>
                         <Box onClick={() => handleLink("")} sx={{ color: 'black !important' }}>
-                            <Typography variant="h4" sx={{color: opac ? "black" : "gray"}}>VISION LED</Typography>
+                            <Typography variant="h4" sx={{color: opac ? "white" : "#FFFF99"}}>VISION LED</Typography>
                             {/* <CardMedia alt='unsplash image' component="img" sx={{
                                 maxWidth: {
                                     xs: "120px",
@@ -194,16 +194,18 @@ export default function StickyNav() {
                                     }
                                 }}>
                                 <Typography variant="body2" sx={{
-                                    color: opac ? "black" : "gray", fontFamily: "'Nunito Sans', sans-serif", "&:hover": {
-                                        color: 'gray',
+                                    color: "#ffff99", 
+                                    fontFamily: "'Nunito Sans', sans-serif", "&:hover": {
+                                        color: "#ffff99",
                                     },
                                     fontSize: "0.8rem"
                                 }}>SẢN PHẨM</Typography>
                             </Button>
                             <Button color='inherit' sx={{ display: { xs: 'none', md: 'flex' }, textTransform: 'none', fontFamily: "'Nunito Sans', sans-serif", fontWeight: 'bold' }}>
                                 <Typography onClick={() => handleLink("collections")} sx={{
-                                    color: opac ? "black" : "gray", fontFamily: "'Nunito Sans', sans-serif", "&:hover": {
-                                        color: 'gray',
+                                    color: "#ffff99", 
+                                    fontFamily: "'Nunito Sans', sans-serif", "&:hover": {
+                                        color: "#ffff99",
                                     },
                                     fontSize: "0.8rem"
                                 }}>BỘ SƯU TẬP</Typography>
@@ -215,16 +217,18 @@ export default function StickyNav() {
                                 }, textTransform: 'none', fontFamily: "'Nunito Sans', sans-serif", fontWeight: 'bold'
                             }}>
                                 <Typography onClick={() => handleLink("projects")} sx={{
-                                    color: opac ? "black" : "gray", fontFamily: "'Nunito Sans', sans-serif", "&:hover": {
-                                        color: 'gray',
+                                    color: "#ffff99", 
+                                    fontFamily: "'Nunito Sans', sans-serif", "&:hover": {
+                                        color: "#ffff99",
                                     },
                                     fontSize: "0.8rem"
                                 }}>DỰ ÁN</Typography>
                             </Button>
                             <Button color='inherit' sx={{ display: { xs: 'none', md: 'flex' }, textTransform: 'none', fontFamily: "'Nunito Sans', sans-serif", fontWeight: 'bold' }}>
                                 <Typography onClick={() => handleLink("about-us")} sx={{
-                                    color: opac ? "black" : "gray", fontFamily: "'Nunito Sans', sans-serif", "&:hover": {
-                                        color: 'gray',
+                                    color: "#ffff99", 
+                                    fontFamily: "'Nunito Sans', sans-serif", "&:hover": {
+                                        color: "#ffff99",
                                     },
                                     fontSize: "0.8rem"
                                 }}>VỀ CHÚNG TÔI</Typography>
