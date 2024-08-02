@@ -42,6 +42,8 @@ export default function HomeContent() {
                             }
                         }}>BETTER LIGHT FOR BETTER LIFE</Typography>
                         <br />
+                        <br />
+                        <br />
                     </Box>
                     <Link className='btn-dir' to='/collections' style={{ textDecoration: 'none' }}>
                         <div className="arrow-container">
