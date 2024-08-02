@@ -24,8 +24,8 @@ export default function ProductCard(props) {
                 <span onClick={handleLink}>
                     <CardMedia alt='unsplash image' component="img" image={props.productImg ? props.productImg : ""} />
                     <CardContent sx={{ position: 'absolute', bottom: 0, left: 0, minHeight: "150px", justifyContent: 'end', textAlign: 'left', display: 'flex', flexDirection: 'column', borderRadius: "0 !important" }}>
-                        <Typography gutterBottom variant='h5' sx={{ color: 'black', fontSize: '1rem', flex: 'left' }}>{props.productName}</Typography>
-                        <Typography variant='body1' sx={{ color: 'black', fontWeight: 'bold', fontSize: '1rem' }}>{priceDisplay}</Typography>
+                        <Typography gutterBottom variant='h5' sx={{ fontFamily: "'Times New Roman', Times, serif", color: 'black', fontSize: '1rem', flex: 'left' }}>{props.productName}</Typography>
+                        <Typography variant='body1' sx={{ fontFamily: "'Times New Roman', Times, serif", color: 'black', fontWeight: 'bold', fontSize: '1rem' }}>{priceDisplay}</Typography>
                     </CardContent>
                 </span>
             </Card >

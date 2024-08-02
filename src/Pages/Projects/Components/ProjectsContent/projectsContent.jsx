@@ -31,7 +31,8 @@ const ProjectCard = ({ onClickEvent, title, image, description }) => (
   <CardContent sx={{
     backgroundColor: 'transparent', 
   }}>
-    <Typography variant="h5" component="div">
+    <Typography variant="h5" component="div" sx={{
+                                      fontFamily: "'Times New Roman', Times, serif"}}>
       {title}
     </Typography>
     <Typography variant="body2" color="text.secondary" sx={{
@@ -40,7 +41,8 @@ const ProjectCard = ({ onClickEvent, title, image, description }) => (
       display: '-webkit-box',
       '-webkit-line-clamp': 3, 
       '-webkit-box-orient': 'vertical',
-      wordWrap: 'break-word'
+      wordWrap: 'break-word',
+                                      fontFamily: "'Times New Roman', Times, serif"
     }}>
       {description}
     </Typography>

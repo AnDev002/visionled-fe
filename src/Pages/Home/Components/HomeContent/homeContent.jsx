@@ -39,7 +39,8 @@ export default function HomeContent() {
                                 xs: '1.3rem',
                                 sm: '2rem',
                                 md: '3rem'
-                            }
+                            },
+                            fontFamily: "'Times New Roman', Times, serif"
                         }}>BETTER LIGHT FOR BETTER LIFE</Typography>
                         <br />
                     </Box>
@@ -66,7 +67,8 @@ export default function HomeContent() {
                                 color: 'white',
                                 transition: '.3s',
                             },
-                            marginTop: '20px'
+                            marginTop: '20px',
+                            fontFamily: "'Times New Roman', Times, serif"
                         }}>
                             bộ sưu tập
                         </Button>
@@ -83,7 +85,7 @@ export default function HomeContent() {
                         md: "0 50px",
                         lg: "0 150px",
                         xl: "0 250px"
-                    }, userSelect: 'none', marginBottom: "10px", fontFamily: "'Nunito Sans', sans-serif", fontSize: '1.5rem'
+                    }, userSelect: 'none', marginBottom: "10px", fontFamily: "'Times New Roman', Times, serif", fontSize: '1.5rem'
                 }}>Mua sắm với chúng tôi</Typography>
 
                 <Box sx={{
@@ -99,7 +101,7 @@ export default function HomeContent() {
                             md: "0 50px",
                             lg: "0 150px",
                             xl: "0 250px"
-                        }, userSelect: 'none', color: 'black', fontFamily: "'Nunito Sans', sans-serif", fontSize: '1.0rem'
+                        }, userSelect: 'none', color: 'black', fontFamily: "'Times New Roman', Times, serif", fontSize: '1.0rem'
                     }}>
                         Vision Led là một trong những đối tác hàng đầu trong việc thiết kế các giải pháp chiếu sáng cho mọi nhà. Chúng tôi tự hào về việc mang đến sự sáng tạo độc đáo và ưu tiên hàng đầu là sự hài lòng của khách hàng trong mọi dự án chúng tôi thực hiện</Typography>
                 </Box>
@@ -119,6 +121,7 @@ export default function HomeContent() {
                     <Button color='primary' sx={{
                         display: 'flex',
                         justifyContent: 'center',
+                        fontFamily: "'Times New Roman', Times, serif",
                         alignItems: 'center',
                         color: 'white',
                         padding: '8px 20px',
@@ -144,7 +147,7 @@ export default function HomeContent() {
                         md: "0 50px",
                         lg: "0 150px",
                         xl: "0 250px"
-                    }, userSelect: 'none', marginBottom: "10px", fontFamily: "'Nunito Sans', sans-serif", fontSize: '1.5rem'
+                    }, userSelect: 'none', marginBottom: "10px", fontFamily: "'Times New Roman', Times, serif", fontSize: '1.5rem'
                 }}>Khám phá bộ sưu tập của chúng tôi</Typography>
 
                 <Box sx={{
@@ -160,7 +163,7 @@ export default function HomeContent() {
                             md: "0 50px",
                             lg: "0 150px",
                             xl: "0 250px"
-                        }, userSelect: 'none', color: 'black', fontFamily: "'Nunito Sans', sans-serif", fontSize: '1.0rem'
+                        }, userSelect: 'none', color: 'black', fontFamily: "'Times New Roman', Times, serif", fontSize: '1.0rem'
                     }}>Chúng tôi đã tuyển chọn các thiết bị chiếu sáng tốt nhất từ ​​các nhà thiết kế và nhà sản xuất nổi tiếng trên khắp thế giới. Bộ sưu tập của chúng tôi có nhiều mẫu mã, từ kiểu dáng đẹp và hiện đại đến cổ điển và trang trí tinh tế, tất cả đều được chế tác từ những vật liệu chất lượng cao nhất và hoàn thiện đến từng chi tiết nhỏ nhất.
                     </Typography>
                 </Box>

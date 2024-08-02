@@ -17,7 +17,8 @@ export default function ProjectDetailsContent() {
     return (
         <>
             <Box sx={{ marginTop: '120px', textAlign: 'center' }}>
-                <Typography variant='h3' sx={{ textAlign: 'center' }}>
+                <Typography variant='h3' sx={{ textAlign: 'center',
+                                      fontFamily: "'Times New Roman', Times, serif" }}>
                     {
                         dataDetails ? (dataDetails?.data[0]?.project?.name).toUpperCase() : ""
                     }
@@ -54,7 +55,8 @@ export default function ProjectDetailsContent() {
                                                 md: "50px"
                                             }
                                         }}>
-                                            <Typography variant='h5'>
+                                            <Typography variant='h5' sx={{
+                                      fontFamily: "'Times New Roman', Times, serif"}}>
                                                 {item.description}
                                             </Typography>
                                         </Grid>
@@ -68,7 +70,8 @@ export default function ProjectDetailsContent() {
                                             },
                                             order: { xs: 2, md: 2, lg: 2 }
                                         }}>
-                                            <Typography variant='h5'>
+                                            <Typography variant='h5' sx={{
+                                      fontFamily: "'Times New Roman', Times, serif"}}>
                                                 {item.description}
                                             </Typography>
                                         </Grid>
@@ -98,7 +101,8 @@ export default function ProjectDetailsContent() {
                                             md: "50px"
                                         }, order: 3
                                     }}>
-                                        <Typography variant='h5'>
+                                        <Typography variant='h5' sx={{
+                                      fontFamily: "'Times New Roman', Times, serif"}}>
                                             {item.description}
                                         </Typography>
                                     </Grid>

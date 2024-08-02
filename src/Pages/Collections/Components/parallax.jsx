@@ -26,10 +26,10 @@ export default function ParallaxCollections({ img, name, index }) {
             <Parallax bgImage={img} strength={100}>
                 <div style={{ height: "100vh" }}>
                     <div style={insideStyles}>
-                        <Typography variant="h4" sx={{fontFamily: "'Nunito Sans', sans-serif"}}>{name}</Typography>
+                        <Typography variant="h4" sx={{fontFamily: "'Times New Roman', Times, serif"}}>{name}</Typography>
                         <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
                             <BtnSeeMore onClick={() => handleNavLink(index)} styles={{
-                                fontFamily: "'Nunito Sans', sans-serif"
+                                fontFamily: "'Times New Roman', Times, serif"
                             }} />
                         </div>
                     </div>

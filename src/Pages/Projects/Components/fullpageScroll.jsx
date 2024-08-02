@@ -49,10 +49,13 @@ export default function FullpageScroll() {
                                                         xs: ".8rem",
                                                         md: "1rem"
                                                     },
-                                                    alignItems: 'center'
+                                                    alignItems: 'center',
+                                                      fontFamily: "'Times New Roman', Times, serif"
                                                 }}>
-                                                    <Typography variant='h3' sx={{ textAlign: 'center', fontSize: { xs: "1.5rem", sm: "2rem" } }}>{item.name}</Typography>
-                                                    <Typography sx={{ margin: '20px 0' }}>{item.description}</Typography>
+                                                    <Typography variant='h3' sx={{ textAlign: 'center', fontSize: { xs: "1.5rem", sm: "2rem" },
+                                      fontFamily: "'Times New Roman', Times, serif" }}>{item.name}</Typography>
+                                                    <Typography sx={{ margin: '20px 0',
+                                      fontFamily: "'Times New Roman', Times, serif" }}>{item.description}</Typography>
                                                     <BtnSeeMore onClick={() => handleNavLink(item._id)} style={{ mgLeft: '0', transform: 'none' }} />
                                                 </Box>
                                             </Grid>

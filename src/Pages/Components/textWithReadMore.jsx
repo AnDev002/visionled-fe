@@ -19,7 +19,7 @@ function TextWithReadMore({ text, maxLength }) {
                     md: "0 50px",
                     lg: "0 150px",
                     xl: "0 250px"
-                }, color: 'black', fontFamily: "'Nunito Sans', sans-serif",
+                }, color: 'black', fontFamily: "'Times New Roman', Times, serif",
                 fontSize: '1.0rem'
             }}>{displayText}
             
