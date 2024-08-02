@@ -250,7 +250,7 @@ export default function StickyNav() {
                                     }
                                     {(isLoggedIn === false)
                                         ?
-                                        <IconButton sx={{ color: opac ? "black" : "gray" }} aria-label="cart" onClick={() => handleToggleLogin()} >
+                                        <IconButton sx={{ color: opac ? "white" : "white" }} aria-label="cart" onClick={() => handleToggleLogin()} >
                                             <AccountCircleIcon fontSize='2px' style={{ fontSize: '20px !important' }} />
                                         </IconButton>
                                         : <IconButton aria-label="cart" onClick={() => handleToggleAccountOption()}>
@@ -262,7 +262,7 @@ export default function StickyNav() {
                                         (toggleAccountOption === true)
                                             ?
                                             <Box sx={{ position: 'absolute', right: '0', bgcolor: 'white', padding: '10px', width: '200px', borderRadius: '5px', zIndex: "100" }}>
-                                                <Typography variant='h6' sx={{ color: 'black', display: 'flex', alignItems: 'center' }}>
+                                                <Typography variant='h6' sx={{ color: 'white', display: 'flex', alignItems: 'center' }}>
                                                     <AccountCircleIcon style={{ fontSize: '10px !important' }} />
                                                     <span style={{ margin: '5px', marginBottom: '10px' }}>
                                                         {userSelector.name}
@@ -299,7 +299,7 @@ export default function StickyNav() {
                                 />
                             </div>
                             <div className='right-nav' style={{ position: 'relative', display: "flex", alignItems: "center", justifyContent: "center" }}>
-                                <IconButton sx={{ color: opac ? "black" : "gray" }} aria-label="cart" onClick={() => handleToggleCart()}>
+                                <IconButton sx={{ color: opac ? "white" : "white" }} aria-label="cart" onClick={() => handleToggleCart()}>
                                     <StyledBadge badgeContent={orderSelector.orderItems.length} color="error">
                                         <ShoppingCartIcon sx={{ fontSize: '20px !important' }} />
                                     </StyledBadge>
@@ -347,10 +347,10 @@ export default function StickyNav() {
                             </div>
                             <Box className={`searchbox ${(toggleSearch === true) ? 'searchbox-active' : ''} ${(toggleSearch === true) ? 'searchbar-active' : ''}`} sx={{
                                 marginTop: '5px',
-                                color: opac ? "black" : "gray"
+                                color: opac ? "white" : "white"
                             }}>
                                 {(toggleSearch === true) ? <Overlay func={handleToggleSearch} /> : ""}
-                                <div className='right-nav search-ic' onClick={handleToggleSearch}><SearchIcon style={{ fontSize: '10px !important', color: "black !important" }} /></div>
+                                <div className='right-nav search-ic' onClick={handleToggleSearch}><SearchIcon style={{ fontSize: '10px !important', color: "white !important" }} /></div>
                                 <div className="gr-search">
                                     <input className={`searchbar`} type="text" value={searchValue} onChange={onSearch} />
                                     <button className="btn-search" onClick={handleSearch}><SearchIcon style={{ fontSize: '10px !important' }} /></button>
