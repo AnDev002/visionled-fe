@@ -299,7 +299,7 @@ export default function StickyNav() {
                                 />
                             </div>
                             <div className='right-nav' style={{ position: 'relative', display: "flex", alignItems: "center", justifyContent: "center" }}>
-                                <IconButton sx={{ color: opac ? "white" : "white" }} aria-label="cart" onClick={() => handleToggleCart()}>
+                                <IconButton sx={{ color: opac ? "white" : "white", marginLeft: '15px' }} aria-label="cart" onClick={() => handleToggleCart()}>
                                     <StyledBadge badgeContent={orderSelector.orderItems.length} color="error">
                                         <ShoppingCartIcon sx={{ fontSize: '20px !important' }} />
                                     </StyledBadge>
