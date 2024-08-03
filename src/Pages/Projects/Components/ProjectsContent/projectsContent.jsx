@@ -1,6 +1,6 @@
 import React from 'react'
 import FullpageScroll from '../fullpageScroll'
-import { Box, Card, CardContent, CardMedia, Grid, Typography } from '@mui/material'
+import { Box, Button, Card, CardContent, CardMedia, Grid, Typography } from '@mui/material'
 
 import { useNavigate, useParams } from 'react-router-dom'
 import * as ProjectServices from "../../../../Services/ProjectServices"
@@ -8,7 +8,21 @@ import { useQuery } from '@tanstack/react-query'
 import BtnSeeMore from '../../../Components/btnSeeMore'
 
 
-const ProjectCard = ({ onClickEvent, title, image, description }) => (
+
+export default function ProjectsContent() {
+
+  const navigate = useNavigate();
+  const getAllProject = async () => {
+      const res = await ProjectServices.GetAllProject();
+      return res;
+  }
+  const { isLoading, data } = useQuery({ queryKey: ['projects'], queryFn: getAllProject })
+  const handleNavLink = (projectId) => {
+      navigate(`/project-details/${projectId}`);
+  }
+
+  
+const ProjectCard = ({ onClickEvent, title, image, description, projectId }) => (
   <Card 
   sx={{
     cursor: "pointer",
@@ -31,41 +45,57 @@ const ProjectCard = ({ onClickEvent, title, image, description }) => (
     }}
   />
   <CardContent sx={{
-    backgroundColor: 'transparent', 
+        display: 'flex',
+        flexDirection: 'column', // Đặt chiều dọc cho nội dung
+        alignItems: 'center', // Căn giữa theo chiều ngang
+        justifyContent: 'center', // Căn giữa theo chiều dọc
+        backgroundColor: 'transparent',
+        width: '70vw', // Chiếm phần còn lại của thẻ Card
   }}>
-    <Typography variant="h5" component="div" sx={{
-                                      fontFamily: "'Times New Roman', Times, serif"}}>
+    <br />
+    <Typography variant="h2" component="div" sx={{fontFamily: "'Times New Roman', Times, serif", textAlign: 'center'}}>
       {title}
     </Typography>
-    <Typography variant="body2" color="text.secondary" sx={{
+    <br /><br />
+    <Typography variant="h4" color="text.secondary" sx={{
+      padding: '0px 50px',
       overflow: 'hidden', 
       textOverflow: 'ellipsis', 
       display: '-webkit-box',
       '-webkit-line-clamp': 3, 
       '-webkit-box-orient': 'vertical',
       wordWrap: 'break-word',
-                                      fontFamily: "'Times New Roman', Times, serif"
+      fontFamily: "'Times New Roman', Times, serif"
     }}>
       {description}
     </Typography>
+    <br />
+    <Button onClick={() => handleNavLink(projectId)} color='primary' sx={{
+                            display: 'flex',
+                            justifyContent: 'center',
+                            alignItems: 'center',
+                            padding: '5px 10px',
+                            paddingRight: '20px',
+                            margin: '5px 0px',
+                            marginBottom: '50px',
+                            marginLeft: `10px`,
+                            color: 'white',
+                            padding: '8px 20px',
+                            border: '1px solid white',
+                            backgroundColor: 'rgba(50, 50, 50, 100%)',
+                            borderRadius: '0',
+                            '&:hover': {
+                                backgroundColor: 'rgba(256, 256, 256, 100%)',
+                                border: '1px solid white',
+                                color: 'black',
+                                borderColor: 'black',
+                                transition: '.3s',
+                            },
+
+                        }}>Xem Chi Tiết Dự Án</Button>
   </CardContent>
 </Card>
 );
-
-export default function ProjectsContent() {
-
-  const navigate = useNavigate();
-  const getAllProject = async () => {
-      const res = await ProjectServices.GetAllProject();
-      return res;
-  }
-  const { isLoading, data } = useQuery({ queryKey: ['projects'], queryFn: getAllProject })
-  const handleNavLink = (projectId) => {
-    console.log("ok");
-      navigate(`/project-details/${projectId}`);
-  }
-
-  
   return (
     <>
         {/* <FullpageScroll />*/}
@@ -95,7 +125,7 @@ export default function ProjectsContent() {
                         isLoading === false && data?.data.length > 0 &&
                         data.data.map((item, index) => (
                           <Grid item key={index} xs={6} sm={12} md={12}>
-                            <ProjectCard onClickEvent={() => handleNavLink(item._id)} style={{ mgLeft: '0', transform: 'none' }} title={item.name} image={item.image} description={item.description} />
+                            <ProjectCard projectId={item._id} style={{ mgLeft: '0', transform: 'none' }} title={item.name} image={item.image} description={item.description} />
                           </Grid>
                         ))}
                       </Grid> 

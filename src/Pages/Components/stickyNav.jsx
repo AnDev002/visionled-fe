@@ -39,7 +39,7 @@ export default function StickyNav() {
             const isScrollingDown = prevScrollPos <= currentScrollPos;
 
             setVisible(!isScrollingDown);
-            if (currentScrollPos <= 0) {
+            if (currentScrollPos <= 10) {
                 setOpac(true); 
                 setVisible(true);
             }
