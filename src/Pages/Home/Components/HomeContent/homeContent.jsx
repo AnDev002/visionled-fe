@@ -31,7 +31,7 @@ export default function HomeContent() {
             <Box className="full-height-img">
                 <Box sx={{ display: 'flex', justifyContent: 'center', position: 'absolute', top: '50%', left: '50%', transform: 'translate(-50%, -50%)', zIndex: '100', flexWrap: 'wrap' }}>
                     <Box className="home-content-s" sx={{
-                        width: '100vw', padding: '0 20px', color: "white", fontFamily: '"Inconsolata", monospace',
+                        width: '100vw', padding: '0 20px', color: "white", fontFamily: "'Times New Roman', Times, serif",
                         display: 'flex', justifyContent: 'center'
                     }}>
                         <Typography variant="h3" sx={{
@@ -101,7 +101,7 @@ export default function HomeContent() {
                             md: "0 50px",
                             lg: "0 150px",
                             xl: "0 250px"
-                        }, userSelect: 'none', color: 'black', fontFamily: "'Times New Roman', Times, serif", fontSize: '1.0rem'
+                        }, userSelect: 'none', bgColor: "#ffffff !important", color: 'black', fontFamily: "'Times New Roman', Times, serif", fontSize: '1.0rem'
                     }}>
                         Vision Led là một trong những đối tác hàng đầu trong việc thiết kế các giải pháp chiếu sáng cho mọi nhà. Chúng tôi tự hào về việc mang đến sự sáng tạo độc đáo và ưu tiên hàng đầu là sự hài lòng của khách hàng trong mọi dự án chúng tôi thực hiện</Typography>
                 </Box>

@@ -9,33 +9,6 @@ export default function BtnSeeMore(props) {
     const handleNavLink = (collectionId) => {
         navigate(`/products/${collectionId}`);
     }
-    //     <Link className='btn-dir' to='/collections' style={{ textDecoration: 'none' }}>
-    //     <div className="arrow-container">
-    //         <div className="arrow"></div>
-    //     </div>
-    //     <Button color='primary' sx={{
-    //         display: 'flex',
-    //         justifyContent: 'center',
-    //         alignItems: 'center',
-    //         color: 'white',
-    //         padding: '5px 10px',
-    //         paddingRight: '30px',
-    //         border: '1px solid black',
-    //         backgroundColor: 'rgba(50, 50, 50, 0%)',
-    //         borderRadius: '0',
-    //         zIndex: '100',
-    //         borderColor: 'white',
-    //         fontSize: '1rem',
-    //         '&:hover': {
-    //             backgroundColor: 'rgba(256, 256, 256, 0%)',
-    //             border: '1px solid white',
-    //             color: 'white',
-    //             transition: '.3s',
-    //         },
-    //     }}>
-    //         mua sắm
-    //     </Button>
-    // </Link>
     return (
         <>
             {
@@ -49,7 +22,7 @@ export default function BtnSeeMore(props) {
                             justifyContent: 'center',
                             alignItems: 'center',
                             padding: '5px 10px',
-                            paddingRight: '30px',
+                            paddingRight: '20px',
                             margin: '5px 0px',
                             marginBottom: '50px',
                             marginLeft: `${props.mgLeft}`,
@@ -57,12 +30,13 @@ export default function BtnSeeMore(props) {
                             color: 'white',
                             padding: '8px 20px',
                             border: '1px solid white',
-                            backgroundColor: 'rgba(50, 50, 50, 0%)',
+                            backgroundColor: 'rgba(50, 50, 50, 100%)',
                             borderRadius: '0',
                             '&:hover': {
-                                backgroundColor: 'rgba(256, 256, 256, 0%)',
+                                backgroundColor: 'rgba(256, 256, 256, 100%)',
                                 border: '1px solid white',
-                                color: 'white',
+                                color: 'black',
+                                borderColor: 'black',
                                 transition: '.3s',
                             },
 
@@ -84,12 +58,13 @@ export default function BtnSeeMore(props) {
                             color: 'white',
                             padding: '8px 20px',
                             border: '1px solid white',
-                            backgroundColor: 'rgba(50, 50, 50, 0%)',
+                            backgroundColor: 'rgba(50, 50, 50, 100%)',
                             borderRadius: '0',
                             '&:hover': {
-                                backgroundColor: 'rgba(256, 256, 256, 0%)',
+                                backgroundColor: 'rgba(256, 256, 256, 100%)',
                                 border: '1px solid white',
-                                color: 'white',
+                                color: 'black',
+                                borderColor: 'black',
                                 transition: '.3s',
                             },
 

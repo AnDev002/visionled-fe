@@ -68,10 +68,10 @@ export default function ProductCollection() {
                                             cursor: 'pointer',
                                             width: '100%',
                                             height: 'auto',
-                                            backgroundColor: '#F7F7F7'
+                                            backgroundColor: '#ffffff'
                                         }} className="crd crd-collection">
                                             <CardMedia alt='unsplash image' component="img" sx={{ height: randomNums1[index] }} image={item.image} />
-                                            <Typography variant='h4' sx={{ textAlign: 'center', margin: '10px 0', fontFamily: "'Nunito Sans', sans-serif", textTransform: "uppercase", fontSize: "1.5rem" }}>{item.name}</Typography>
+                                            <Typography variant='h4' sx={{ textAlign: 'center', margin: '10px 0', fontFamily: "'Times New Roman', Times, serif", textTransform: "uppercase", fontSize: "1.5rem" }}>{item.name}</Typography>
                                             <BtnSeeMore collectionId={item._id} mgLeft={'50%'} transform='translateX(-50%)' />
                                         </Card>
                                     })
@@ -90,10 +90,10 @@ export default function ProductCollection() {
                                             cursor: 'pointer',
                                             width: '100%',
                                             height: 'auto',
-                                            backgroundColor: '#F7F7F7'
+                                            backgroundColor: '#ffffff'
                                         }} className="crd crd-collection">
                                             <CardMedia alt='unsplash image' sx={{ height: randomNums2[index] }} component="img" image={item.image} />
-                                            <Typography variant='h4' sx={{ textAlign: 'center', margin: '10px 0', fontFamily: "'Nunito Sans', sans-serif", textTransform: "uppercase", fontSize: "1.5rem" }}>{item.name}</Typography>
+                                            <Typography variant='h4' sx={{ textAlign: 'center', margin: '10px 0', fontFamily: "'Times New Roman', Times, serif", textTransform: "uppercase", fontSize: "1.5rem" }}>{item.name}</Typography>
                                             <BtnSeeMore collectionId={item._id} mgLeft={'50%'} transform='translateX(-50%)' />
                                         </Card>
                                     })

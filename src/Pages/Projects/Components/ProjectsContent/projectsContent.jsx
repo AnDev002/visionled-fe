@@ -13,19 +13,21 @@ const ProjectCard = ({ onClickEvent, title, image, description }) => (
   sx={{
     cursor: "pointer",
     border: '1px solid black', 
-    borderRadius: '12px'
+    display: 'flex'
   }}
   onClick={onClickEvent} 
   >
   <CardMedia
     component="img"
     alt={title}
-    height="350"
+    height="auto"
     image={image}
     title={title}
     sx={{
       cursor: "pointer",
       userSelect: 'none',
+      width: '30vw',
+      height: 'auto'
     }}
   />
   <CardContent sx={{
@@ -67,6 +69,7 @@ export default function ProjectsContent() {
   return (
     <>
         {/* <FullpageScroll />*/}
+        <div className="layer" style={{background: '#373737', position: 'fixed', top: '0', left: '0', right: '0', bottom: '0'}}></div>
         <Box sx={{
                     marginTop: {
                         xs: "65px",
@@ -74,7 +77,7 @@ export default function ProjectsContent() {
                         md: "75px",
                         lg: "80px",
                     },
-                    background: "#F7F7F7",
+                    background: "#373737",
                     position: 'relative',
                     zIndex: 80,
                     display: 'flex',
@@ -91,7 +94,7 @@ export default function ProjectsContent() {
                       {
                         isLoading === false && data?.data.length > 0 &&
                         data.data.map((item, index) => (
-                          <Grid item key={index} xs={12} sm={6} md={4}>
+                          <Grid item key={index} xs={6} sm={12} md={12}>
                             <ProjectCard onClickEvent={() => handleNavLink(item._id)} style={{ mgLeft: '0', transform: 'none' }} title={item.name} image={item.image} description={item.description} />
                           </Grid>
                         ))}

@@ -255,7 +255,7 @@ export default function ProductsContent() {
                         md: "45px",
                         lg: "50px",
                     },
-                    background: "#F7F7F7",
+                    background: "#ffffff",
                     position: "relative",
                     zIndex: "80"
                 }}>

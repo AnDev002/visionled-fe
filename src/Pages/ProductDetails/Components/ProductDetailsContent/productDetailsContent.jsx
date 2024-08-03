@@ -339,7 +339,7 @@ export default function ProductDetailsContent() {
                             fontFamily: "'Times New Roman', Times, serif"
                           }}
                         >
-                          <Typography>
+                          <Typography sx={{fontFamily: "'Times New Roman', Times, serif"}}>
                             Model
                           </Typography>
                         </span>
@@ -369,7 +369,7 @@ export default function ProductDetailsContent() {
                           fontFamily: "'Times New Roman', Times, serif"
                         }}
                       >
-                        <Typography>
+                        <Typography sx={{fontFamily: "'Times New Roman', Times, serif"}}>
                           Số Lượng
                         </Typography>
                       </span>
@@ -426,7 +426,7 @@ export default function ProductDetailsContent() {
                           }}
                         >
                           <Box sx={{ display: "flex", alignItems: "center", textTransform: 'none', color: 'black' }}>
-                            <Typography variant="h6">Mua Ngay</Typography>
+                            <Typography variant="h6"  sx={{fontFamily: "'Times New Roman', Times, serif"}}>Mua Ngay</Typography>
                           </Box>
                         </Button>
                         <button
