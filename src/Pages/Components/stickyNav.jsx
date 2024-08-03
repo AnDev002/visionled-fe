@@ -243,7 +243,8 @@ export default function StickyNav() {
                                 <Box sx={{
                                     display: {
                                         md: 'block'
-                                    }
+                                    },
+                                        marginLeft: '15px'
                                 }}>
                                     {
                                         ((toggleLoginForm === true) ? <Overlay func={handleToggleLogin} /> : "") || ((toggleAccountOption === true) ? <Overlay func={handleToggleAccountOption} /> : "")
