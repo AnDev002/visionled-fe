@@ -27,7 +27,10 @@ const ProjectCard = ({ onClickEvent, title, image, description, projectId }) => 
   sx={{
     cursor: "pointer",
     border: '1px solid black', 
-    display: 'flex'
+    display: {
+      xs: "block",
+      md: 'flex'
+    }
   }}
   onClick={onClickEvent} 
   >
@@ -39,11 +42,11 @@ const ProjectCard = ({ onClickEvent, title, image, description, projectId }) => 
     sx={{
       cursor: "pointer",
       userSelect: 'none',
-      height: {
-        xs: "35vw",
-        sm: '30vw'
+      width: {
+        xs: '100%',
+        md: '30vw',
       },
-      width: 'auto'
+      height: 'auto'
     }}
   />
   <CardContent sx={{
@@ -52,7 +55,10 @@ const ProjectCard = ({ onClickEvent, title, image, description, projectId }) => 
         alignItems: 'center', // Căn giữa theo chiều ngang
         justifyContent: 'center', // Căn giữa theo chiều dọc
         backgroundColor: 'transparent',
-        width: '70vw', // Chiếm phần còn lại của thẻ Card
+        width: {
+          xs: '95vw',
+          md: '70vw'
+        }, // Chiếm phần còn lại của thẻ Card
   }}>
     <br />
     <Typography variant="h2" component="div" sx={{fontFamily: "'Times New Roman', Times, serif", textAlign: 'center', fontSize: {
@@ -131,7 +137,7 @@ const ProjectCard = ({ onClickEvent, title, image, description, projectId }) => 
                     alignItems: 'center',
                     padding: '20px',
                     gap: '20px'}}>
-                      <Grid container spacing={3}>
+                      <Grid container spacing={1}>
                       {
                         isLoading === false && data?.data.length > 0 &&
                         data.data.map((item, index) => (
