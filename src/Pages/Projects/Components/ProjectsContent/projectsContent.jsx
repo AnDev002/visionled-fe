@@ -34,14 +34,16 @@ const ProjectCard = ({ onClickEvent, title, image, description, projectId }) => 
   <CardMedia
     component="img"
     alt={title}
-    height="auto"
     image={image}
     title={title}
     sx={{
       cursor: "pointer",
       userSelect: 'none',
-      width: '30vw',
-      height: 'auto'
+      height: {
+        xs: "35vw",
+        sm: '30vw'
+      },
+      width: 'auto'
     }}
   />
   <CardContent sx={{
@@ -53,7 +55,11 @@ const ProjectCard = ({ onClickEvent, title, image, description, projectId }) => 
         width: '70vw', // Chiếm phần còn lại của thẻ Card
   }}>
     <br />
-    <Typography variant="h2" component="div" sx={{fontFamily: "'Times New Roman', Times, serif", textAlign: 'center'}}>
+    <Typography variant="h2" component="div" sx={{fontFamily: "'Times New Roman', Times, serif", textAlign: 'center', fontSize: {
+      xs: '22px',
+      sm: '30px',
+      md: '36px'
+    }}}>
       {title}
     </Typography>
     <br /><br />
@@ -65,7 +71,12 @@ const ProjectCard = ({ onClickEvent, title, image, description, projectId }) => 
       '-webkit-line-clamp': 3, 
       '-webkit-box-orient': 'vertical',
       wordWrap: 'break-word',
-      fontFamily: "'Times New Roman', Times, serif"
+      fontFamily: "'Times New Roman', Times, serif",
+      fontSize: {
+        xs: '18px',
+        sm: '26px',
+        md: '30px'
+      }
     }}>
       {description}
     </Typography>
@@ -124,7 +135,7 @@ const ProjectCard = ({ onClickEvent, title, image, description, projectId }) => 
                       {
                         isLoading === false && data?.data.length > 0 &&
                         data.data.map((item, index) => (
-                          <Grid item key={index} xs={6} sm={12} md={12}>
+                          <Grid item key={index} xs={12} sm={12} md={12}>
                             <ProjectCard projectId={item._id} style={{ mgLeft: '0', transform: 'none' }} title={item.name} image={item.image} description={item.description} />
                           </Grid>
                         ))}
