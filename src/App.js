@@ -78,7 +78,6 @@ function App() {
     <>
       <ThemeProvider theme={theme}>
         
-        <TouchProvider>
           <Router>
             <GoToTop />
             <FastContactButton />
@@ -100,7 +99,6 @@ function App() {
               <Route path="*" element={<p>Path not resolved</p>} />
             </Routes>
           </Router>
-        </TouchProvider>
 
       </ThemeProvider>
     </>

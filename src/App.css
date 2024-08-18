@@ -13,7 +13,7 @@ body {
   /* Internet Explorer and Microsoft Edge */
   /* -ms-overflow-style: inherit;  */
   scrollbar-color: Gray;
-  background-color: #F7F7F7;
+  background-color: #ffffff;
 }
 
 body::-webkit-scrollbar {
