@@ -2,10 +2,22 @@ import { Box, Button, FormControl, IconButton, Input, InputAdornment, InputLabel
 import React from 'react'
 import CloseIcon from '@mui/icons-material/Close';
 import { Visibility, VisibilityOff } from '@mui/icons-material';
+import { getAuth, GoogleAuthProvider, signInWithPopup } from 'firebase/auth'
+import { app } from '../../firebase'
 
 export default function LoginForm({ userNameValue, handleUserNameChange, passwordValue, handlePasswordChange, handleSignIn, data, toggleLoginForm, handleToggleLogin }) {
-    const handleGoogleLogin = () => {
-        window.open("https://visionled.online/api/auth/google/callback", "_self")
+    const auth = getAuth(app);
+    const handleGoogleLogin = async () => {
+       // window.open("https://visionled.online/api/auth/google/callback", "_self")
+        const provider = new GoogleAuthProvider();
+        provider.setCustomParameters({ prompt: "select_account" });
+        try {
+            const resultsFromGoogle = await signInWithPopup(auth, provider);
+            console.log(resultsFromGoogle);
+        } catch (err) {
+            console.error(err);
+        }
+
     }
     const handleFacebookLogin = () => {
         window.open("https://visionled.online/api/auth/facebook", "_self")
