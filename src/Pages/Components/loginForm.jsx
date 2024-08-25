@@ -3,10 +3,11 @@ import React from 'react'
 import CloseIcon from '@mui/icons-material/Close';
 import { Visibility, VisibilityOff } from '@mui/icons-material';
 import { getAuth, GoogleAuthProvider, signInWithPopup } from 'firebase/auth'
-import firebase from 'firebase/app';
+import firebase from 'firebase/compat/app';
 import 'firebase/auth';
 
 export default function LoginForm({ userNameValue, handleUserNameChange, passwordValue, handlePasswordChange, handleSignIn, data, toggleLoginForm, handleToggleLogin }) {
+    
     const auth = getAuth(app);
     const handleGoogleLogin = async () => {
     //    window.open("https://visionled.online/api/auth/google/callback", "_self")
