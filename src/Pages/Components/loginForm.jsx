@@ -10,6 +10,7 @@ import { app } from '../../firebase'
 export default function LoginForm({ userNameValue, handleUserNameChange, passwordValue, handlePasswordChange, handleSignIn, data, toggleLoginForm, handleToggleLogin }) {
     
     const auth = getAuth(app);
+    
     const handleGoogleLogin = async () => {
     //    window.open("https://visionled.online/api/auth/google/callback", "_self")
         // const provider = new GoogleAuthProvider();
@@ -33,7 +34,7 @@ export default function LoginForm({ userNameValue, handleUserNameChange, passwor
         //     console.error(err);
         // }
         auth
-            .signInWithPopup(new firebase.auth.GoogleAuthProvider())
+            .signInWithPopup(new auth.GoogleAuthProvider())
             .then((userCred)=> {
                 console.log(userCred);
             })
