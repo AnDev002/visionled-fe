@@ -32,8 +32,7 @@ export default function LoginForm({ userNameValue, handleUserNameChange, passwor
         // } catch (err) {
         //     console.error(err);
         // }
-        firebase
-            .auth()
+        auth
             .signInWithPopup(new firebase.auth.GoogleAuthProvider())
             .then((userCred)=> {
                 console.log(userCred);
