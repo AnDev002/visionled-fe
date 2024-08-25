@@ -34,7 +34,7 @@ export default function LoginForm({ userNameValue, handleUserNameChange, passwor
         //     console.error(err);
         // }
         auth
-            .signInWithPopup(new auth.GoogleAuthProvider())
+            .signInWithPopup(new GoogleAuthProvider())
             .then((userCred)=> {
                 console.log(userCred);
             })
