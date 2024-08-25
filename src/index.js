@@ -7,7 +7,7 @@ import { ReactQueryDevtools } from '@tanstack/react-query-devtools'
 import { persistor, store } from './Redux/store'
 import { Provider } from 'react-redux'
 import { PersistGate } from 'redux-persist/integration/react'
-
+import './firebase'
 const queryClient = new QueryClient
 
 const root = ReactDOM.createRoot(document.getElementById("root"));

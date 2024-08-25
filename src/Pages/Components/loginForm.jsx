@@ -3,20 +3,39 @@ import React from 'react'
 import CloseIcon from '@mui/icons-material/Close';
 import { Visibility, VisibilityOff } from '@mui/icons-material';
 import { getAuth, GoogleAuthProvider, signInWithPopup } from 'firebase/auth'
-import { app } from '../../firebase'
+import firebase from 'firebase/app';
+import 'firebase/auth';
 
 export default function LoginForm({ userNameValue, handleUserNameChange, passwordValue, handlePasswordChange, handleSignIn, data, toggleLoginForm, handleToggleLogin }) {
     const auth = getAuth(app);
     const handleGoogleLogin = async () => {
-       // window.open("https://visionled.online/api/auth/google/callback", "_self")
-        const provider = new GoogleAuthProvider();
-        provider.setCustomParameters({ prompt: "select_account" });
-        try {
-            const resultsFromGoogle = await signInWithPopup(auth, provider);
-            console.log(resultsFromGoogle);
-        } catch (err) {
-            console.error(err);
-        }
+    //    window.open("https://visionled.online/api/auth/google/callback", "_self")
+        // const provider = new GoogleAuthProvider();
+        // provider.setCustomParameters({ prompt: "select_account" });
+        // try {
+        //     const resultsFromGoogle = await signInWithPopup(auth, provider);
+        //     console.log(resultsFromGoogle);
+        //     const res = await fetch("/api/auth/google", {
+        //         method: "POST",
+        //         headers: {
+        //             "Content-Type": "application/json"
+        //         },
+        //         body: JSON.stringify({ 
+        //             name: resultsFromGoogle.user.displayName,
+        //             email: resultsFromGoogle.user.email,
+        //             googlePhotoUrl: resultsFromGoogle.user.photoURL
+        //         })
+        //     });
+            
+        // } catch (err) {
+        //     console.error(err);
+        // }
+        firebase
+            .auth()
+            .signInWithPopup(new firebase.auth.GoogleAuthProvider())
+            .then((userCred)=> {
+                console.log(userCred);
+            })
 
     }
     const handleFacebookLogin = () => {
