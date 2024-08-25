@@ -4,7 +4,6 @@ import CloseIcon from '@mui/icons-material/Close';
 import { Visibility, VisibilityOff } from '@mui/icons-material';
 import { getAuth, GoogleAuthProvider, onAuthStateChanged, signInWithPopup } from 'firebase/auth'
 import firebase from 'firebase/app';
-import 'firebase/auth';
 import { app } from '../../firebase'
 
 export default function LoginForm({ userNameValue, handleUserNameChange, passwordValue, handlePasswordChange, handleSignIn, data, toggleLoginForm, handleToggleLogin }) {
