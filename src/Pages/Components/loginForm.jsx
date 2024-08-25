@@ -5,6 +5,7 @@ import { Visibility, VisibilityOff } from '@mui/icons-material';
 import { getAuth, GoogleAuthProvider, signInWithPopup } from 'firebase/auth'
 import firebase from 'firebase/compat/app';
 import 'firebase/auth';
+import { app } from '../../firebase'
 
 export default function LoginForm({ userNameValue, handleUserNameChange, passwordValue, handlePasswordChange, handleSignIn, data, toggleLoginForm, handleToggleLogin }) {
     
