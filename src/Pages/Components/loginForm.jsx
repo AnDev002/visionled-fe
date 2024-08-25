@@ -14,20 +14,13 @@ export default function LoginForm({ userNameValue, handleUserNameChange, passwor
     const [token, setToken] = useState('');
     useEffect(() => {
         firebase.auth().onAuthStateChanged((userCred) => {
-            if(userCred) {
-                setAuth(true);
-                userCred.getIdToken().then((token) => {
-                    setToken(token);
-                })
-            }
+           console.log(userCred);
         })
     }, []);
 
     const handleGoogleLogin = async () => {
         authFromFirebase.signInWithPopup(new GoogleAuthProvider()).then((userCred)=> {
-                if(userCred) {
-                    setAuth(true);
-                }
+            console.log(userCred);
         })
     }
     const handleFacebookLogin = () => {
